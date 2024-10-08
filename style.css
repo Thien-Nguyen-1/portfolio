@@ -23,6 +23,7 @@ body {
 /* || MARGIN STYLES */
 .mt-1 {margin-top: 1rem;}
 .mt-2 {margin-top: 2rem;}
+.mt-10 {margin-top: 10rem;}
 .mb-1 {margin-bottom: 1rem;}
 .mb-2 {margin-bottom: 2rem;}
 .mr-1 {margin-right: 1rem;}
@@ -30,13 +31,19 @@ body {
 .ml-1 {margin-left: 1rem;}
 .ml-2 {margin-left: 2rem;}
 
+.t-white {color: white;}
+
 
 p, a{
     display: block;
     font-family: "Poppins", sans-serif;
     font-weight: 600;
     font-style: normal;
-    font-size: 1.2rem;
+    font-size: clamp(1rem, 2vw, 1.3rem)
+}
+
+.t-s {
+    font-size: 0.7rem;
 }
 
 .p-l {
@@ -60,6 +67,11 @@ html {scroll-behavior: smooth;}
 
 nav {
     border-bottom: solid 2px;
+    width: 100%;
+  
+    position: fixed;
+    top: 0;
+    background-color: white;
 }
 
 nav ul {
@@ -78,7 +90,7 @@ nav ul a{
 }
 
 
-
+/* INTRODUCTION SECTION  */
 
 .Intro-Container {
     display: grid;
@@ -113,3 +125,83 @@ h1 {
     max-width: 80%;
     height: auto;
 }
+
+/* PROJECT SECTION  */
+
+.Project-Container {
+    display: flex;
+    flex-direction: column;
+}
+
+.Project-Container .Project-Grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.Project-Container .Project-Grid .Project-n {
+
+    margin: 3rem;
+
+    border: black;
+    border-style:solid;
+    border-radius: 2rem;
+    min-width: 200px;
+    height: 400px;
+    
+   /* background-position: 0% 120%; */
+    position: relative;
+    overflow: hidden;
+    color: white;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+
+    text-shadow: 0 0 3px #000000, 0 0 5px #050505;
+
+}
+
+.Project-Container .Project-Grid .Project-n:first-child {
+    
+    background-image: url('/images/graph.png');
+    background-size: cover;
+}
+
+.Project-Container .Project-Grid .Project-n:nth-child(2) {
+    
+    background-image: url('/images/covidgraph.png');
+    background-size: cover;
+}
+
+
+.Project-Container .Project-Grid .Project-n .Project-Desc {
+    margin-top: 30%;
+}
+
+
+.Project-Container .Project-Grid .Project-n .Skill-Container {
+    margin-top: 10%;
+}
+
+.Project-Container .Project-Grid .Project-n .Skill-Part p {
+    position: relative;
+    left: 0.3rem;
+}
+
+.Outer-Bar {
+    width: 40%;
+    height: 0.5rem;
+    background-color: var(--GREY);
+    border-radius: 1rem;
+    position: relative;
+    left: 0.3rem;
+
+}
+
+.Inner-Bar {
+    
+    height: inherit;
+    background-color: var(--MAGENTA);
+    position: absolute;
+    left: 0;
+    border-radius: 1rem;
+}
+
