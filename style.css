@@ -161,13 +161,13 @@ h1 {
 
 .Project-Container .Project-Grid .Project-n:first-child {
     
-    background-image: url('/images/graph.png');
+    background-image: url('./images/graph.png');
     background-size: cover;
 }
 
 .Project-Container .Project-Grid .Project-n:nth-child(2) {
     
-    background-image: url('/images/covidgraph.png');
+    background-image: url('./images/covidgraph.png');
     background-size: cover;
 }
 
